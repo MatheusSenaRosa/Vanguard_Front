@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@styles/*": ["./src/styles/*"],
+      "@svg/*": ["./src/assets/svg/*"],
+      "@img/*": ["./src/assets/img/*"],
+      "@templates": ["./src/templates"],
+      "@guards": ["./src/guards"],
+      "@hooks": ["./src/shared/hooks"],
+      "@utils": ["./src/shared/utils"],
+      "@libs": ["./src/shared/libs"],
+      "@store": ["./src/shared/store"],
+      "@services": ["./src/shared/services"],
+      "@organisms": ["./src/components/organisms"],
+      "@molecules": ["./src/components/molecules"],
+      "@atoms": ["./src/components/atoms"],
+      "@mocks": ["./src/shared/mocks"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "prismicio.js",
+    "src/templates/Posts/index.js",
+    "src/pages/posts/[....uid].jsx"
+  ],
+  "exclude": ["node_modules"]
+}

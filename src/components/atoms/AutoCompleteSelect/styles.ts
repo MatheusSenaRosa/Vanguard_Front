@@ -1,0 +1,116 @@
+import { motion } from "framer-motion";
+import { rgba } from "polished";
+import styled, { css } from "styled-components";
+
+import { Input as AtomInput } from "../Input/styles";
+
+export const Container = styled.div<{ $isOpen: boolean }>`
+  ${({ theme, $isOpen }) => css`
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    svg {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+
+      border-radius: 0 5px 5px 0;
+      padding: 0 10px;
+
+      color: ${theme.colors.neutral[0]};
+      font-size: 25px;
+      width: 45px;
+
+      transition-duration: 0.3s;
+
+      height: 100%;
+    }
+
+    ${$isOpen &&
+    css`
+      svg {
+        transform: rotate(180deg);
+      }
+    `}
+  `}
+`;
+
+export const Input = styled(AtomInput)<{ $isOpen: boolean }>`
+  ${({ theme, $isOpen }) => css`
+    z-index: 2;
+
+    padding-right: 45px;
+
+    transition-duration: 0.3s;
+
+    color: ${theme.colors.neutral[0]};
+
+    ${$isOpen &&
+    css`
+      border-radius: 5px 5px 0 0;
+    `}
+  `}
+`;
+
+export const NotFoundMessage = styled.p`
+  padding: 10px;
+
+  text-align: center;
+
+  font-size: 13.3px;
+`;
+
+export const List = styled(motion.ul)`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 40px;
+
+    background-color: ${theme.colors.neutral[60]};
+    border-top: 1px solid ${theme.colors.neutral[80]};
+
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 10px 10px 5px 0px ${rgba(theme.colors.neutral[100], 0.5)};
+  `}
+`;
+
+export const Option = styled.li<{ $isActive: boolean }>`
+  ${({ theme, $isActive }) => css`
+    width: 100%;
+
+    button {
+      display: flex;
+      padding: 10px;
+
+      width: 100%;
+
+      font-size: 13.3px;
+      text-align: start;
+      color: ${theme.colors.neutral[0]};
+
+      border: none;
+      background-color: ${$isActive ? theme.colors.neutral[40] : "transparent"};
+
+      cursor: pointer;
+      transition-duration: 0.3s;
+
+      &:hover {
+        background-color: ${theme.colors.neutral[40]};
+      }
+    }
+
+    :last-child button {
+      border-radius: 0 0 5px 5px;
+    }
+  `}
+`;

@@ -1,0 +1,20 @@
+{
+  "slices": {
+    "Teste": {},
+    "HeroSlice": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Complete": {
+      "default": {
+        "primary": {}
+      }
+    }
+  },
+  "_cts": {
+    "posts": {},
+    "complete": {}
+  }
+}

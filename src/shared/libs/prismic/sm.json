@@ -1,0 +1,8 @@
+{
+  "apiEndpoint": "https://vanguard.prismic.io/api/v2",
+  "libraries": [
+    "@/slices"
+  ],
+  "localSliceSimulatorURL": "http://localhost:3001/slice-simulator",
+  "_latest": "0.7.0"
+}

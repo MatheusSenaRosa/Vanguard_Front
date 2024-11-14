@@ -1,0 +1,11 @@
+export { ActivateAccountTemplate } from "./ActivateAccount";
+export { HomeTemplate } from "./Home";
+export { LoginTemplate } from "./Login";
+export { RegisterTemplate } from "./Register";
+export { MyProfileTemplate } from "./MyProfile";
+export { UserTemplate } from "./User";
+export { PostsListTemplate, PostTemplate } from "./Posts";
+export { NotFoundTemplate } from "./NotFound";
+export { ForgotPasswordTemplate } from "./ForgotPassword";
+export { ClassesTemplate } from "./Classes";
+export { ClassTemplate } from "./Class";
